@@ -94,13 +94,13 @@ figure {
 	position: relative;
 }
 figure img {
-	width: 25%;
+	width: 20%;
 }
 figure figcaption {
 	transition: all 1s;
 	height: 0;
 	display: none;
-	width: 25%;
+	width: 20%;
 	position: absolute;
 	font-size: 1.2em;
 	background-color: white;
@@ -118,6 +118,10 @@ figure:hover figcaption {
 	background:rgba(0, 0, 0, 0.6);
 }
 
+#lebenslauf{
+    float: right;
+	width: 25%;
+}
 
 /* wrapperlayout */
 html,
@@ -154,7 +158,7 @@ nav {
 	border-bottom: 4px solid black;
 	display: flex;
 	align-items: center;
-	justify-content: left;
+	justify-content: right;
 	background-color: var(--nav-color);
 }
 nav li {
@@ -166,20 +170,14 @@ nav a {
 	float: left;
 	color: var(--nav-text);
 	text-align: center;
-	padding: 0px 50px 0px 50px;
+	padding: 25px 25px 25px 25px;
 	text-decoration: none;
 	font-size: 17px;
 	transition: width 1s;
 	font-size: 20px;
 }
-nav a::after {
-	content: "";
-	width: 0px;
-	height: 2px;
-	display: block;
-	background: white;
-	transition: 300ms;
-}
+
+
 nav a:hover::after {
 	width: 100%;
 }
@@ -201,7 +199,9 @@ nav li {
 	display: inline-block;
 }
 nav li:hover {
-	background-color: blue;
+	box-shadow: 0 4px 8px 0 rgb(253, 251, 251), 0 6px 20px 0 rgb(252, 252, 252);
+    cursor: pointer;
+	
 }
 
 /* footer */
@@ -286,6 +286,7 @@ form { max-width:420px; margin:50px auto; }
   width:100%;
   box-sizing: border-box;
   outline:0;
+
 }
 
 .feedback-input:focus { border:2px solid  blue c5f; }
@@ -311,29 +312,7 @@ textarea {
   margin-top:-4px;
   font-weight:700;
 }
-[type="submit"]:hover { background:#CC4949; }
 
 
-/* lsd */
-body.lsd * {
-	animation-name: lsd;
-	animation-duration: 5s;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-}
 
-@keyframes lsd {
-	0% {
-		filter: hue-rotate(0deg);
-		transform: scale(1) rotateZ(0deg) rotateY(0deg) rotateX(0deg);
-	}
-	50% {
-		filter: hue-rotate(180deg);
-		transform: scale(1.2) rotateZ(180deg) rotateY(180deg) rotateX(20deg);
-	}
-	100% {
-		filter: hue-rotate(360deg);
-		transform: scale(1) rotateZ(360deg) rotateY(360deg) rotateX(360deg);
-	}
-}
 
